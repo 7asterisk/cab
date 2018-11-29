@@ -1,0 +1,50 @@
+<div class="hr-sect">
+  <h5 style="color:black">Mail Us</h5>
+</div>
+
+
+<div class="row">
+  <div class="col s12 offset-m2 m8">
+    <div class="card grey lighten-5">
+      <div class="card-content ">
+        <div class="row">
+          <form class="col s12" onsubmit="submitForm(); return false">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input type="text" id="name" pattern="[a-z\sA-Z]{5,}" class="validate" required>
+              <label for="name">First Name</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">email</i>
+              <input type="email" id="email" class="validate" required>
+              <label for="email">Email</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">phone</i>
+              <input required type="text" class="validate" id="phone" pattern="[1-9]{1}[0-9]{9}" minlength="10"
+                maxlength="10" pattern=".{10,}" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                data-length="10">
+              <label for="phone">Telephone</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">mode_edit</i>
+              <textarea required id="msg" class="materialize-textarea validate" data-length="120"></textarea>
+              <label for="msg">Message</label>
+            </div>
+            <div class="col s12 center">
+              <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+
+              <button class="btn waves-effect waves-light  orange lighten-2 " type="submit" id="submit">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container " style="border:2px">
+</div>

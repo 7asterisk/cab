@@ -1,0 +1,42 @@
+<div *ngIf="mResolution | async">
+    <mz-sidenav [id]="'sidenav-demo'" [closeOnClick]="'true'" [collapseButtonId]="'btn-sidenav'">
+        <mz-sidenav-header>
+            Sidenav header
+        </mz-sidenav-header>
+        <mz-sidenav-subheader>Link Subheader</mz-sidenav-subheader>
+        <mz-sidenav-link>
+            <a href="#">First Link</a>
+        </mz-sidenav-link>
+        <mz-sidenav-divider></mz-sidenav-divider>
+        <mz-sidenav-link [active]="true">
+            <a href="#">Active Link</a>
+        </mz-sidenav-link>
+        <mz-sidenav-divider></mz-sidenav-divider>
+        <mz-sidenav-link>
+            <a href="#" class="waves-effect">Second Link With Waves</a>
+        </mz-sidenav-link>
+    </mz-sidenav>
+</div>
+
+<div class="navbar-fixed">
+    <nav class=" orange lighten-2" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="tel:+918668492860" class="brand-logo hide-on-med-and-down  "> Shashikala
+                Tours
+                & Travels </a>
+            <a  href="tel:+918668492860" class="brand-logo left hide-on-med-and-up"> <i class="material-icons">
+                    phone </i>
+                    +918668492860 </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+
+            <!-- Dropdown Trigger -->
+            <button id="btn-sidenav" class='right btn hide-on-med-and-up orange lighten-2'>
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+</div>
