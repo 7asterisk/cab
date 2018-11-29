@@ -1,6 +1,47 @@
-<app-navbar></app-navbar>
-<app-welcome></app-welcome>
-<app-people-say></app-people-say>
-<app-mail-us></app-mail-us>
-<app-contact-us></app-contact-us>
-<app-footer></app-footer>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+        <mat-nav-list>
+            <a mat-list-item routerLink="/" (click)="sidenav.close()">
+                <mat-icon>home </mat-icon>
+                <span class="nav-caption">Home</span>
+            </a>
+            <a mat-list-item routerLink="/peopleSay" (click)="sidenav.close()">
+                <mat-icon>question_answer </mat-icon> <span class="nav-caption">Feedback</span>
+            </a>
+            <a mat-list-item routerLink="/aboutUs" (click)="sidenav.close()">
+                <mat-icon>contact_mail </mat-icon> <span class="nav-caption">About us</span>
+            </a>
+            <a mat-list-item routerLink="/ourServices" (click)="sidenav.close()">
+                <mat-icon>attach_money </mat-icon> <span class="nav-caption"> Pricing</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar class="orange lighten-2  navbar-fixed">
+            <mat-toolbar-row>
+                <a id="logo-container" href="/" class="brand-logo ">
+                    Shashikala
+                    Tours
+                    & Travels </a>
+                <div class=" white-text  hide-on-med-and-up">
+                    <button class="orange lighten-2" mat-icon-button (click)="sidenav.toggle()">
+                        <mat-icon>
+                            menu
+                        </mat-icon>
+                    </button>
+                </div>
+                <span class="example-spacer"></span>
+                <div class="hide-on-small-only">
+                        <a routerLink="/"> Home</a>
+                        <a routerLink="/peopleSay">Feedback</a>
+                        <a routerLink="/aboutUs">About us</a>
+                        <a routerLink="/ourServices">Pricing</a>
+                </div>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <main>
+            <router-outlet ></router-outlet>
+        </main>
+        <app-footer></app-footer>
+    </mat-sidenav-content>
+</mat-sidenav-container>

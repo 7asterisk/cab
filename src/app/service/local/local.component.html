@@ -1,0 +1,116 @@
+<div class="hr-sect">
+    <h5 style="color:black">Our Local Packages </h5>
+</div>
+<div class="center">
+    <h5>Pune Dharshan</h5>
+    <h6> place as mach as you can travel within 8hrs & 80km @
+        <b>
+            1600 rs for dezire,
+            1800 rs for Ertiga,
+            2200 rs for Innova
+        </b>
+    </h6>
+</div>
+<div class="container">
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Place</th>
+                <th>Open At</th>
+                <th>Close At</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> Aga Khan Palace</td>
+                <td>9 AM</td>
+                <td>5:30 PM</td>
+            </tr>
+            <tr>
+                <td>Shaniwar Wada</td>
+                <td>9 Am</td>
+                <td>5.30 pm</td>
+            </tr>
+            <tr>
+                <td>Dagadusheth Halwai Ganapati Temple.</td>
+                <td>6 Am</td>
+                <td>10.30 pm</td>
+            </tr>
+            <tr>
+                <td>Saras Baug.</td>
+                <td>5.30 Am</td>
+                <td>8 pm</td>
+            </tr>
+            <tr>
+                <td>Rajiv Gandhi Zoological Park</td>
+                <td>9.30 Am</td>
+                <td>6 pm</td>
+            </tr>
+            <tr>
+                <td>pl deshpande udyan.</td>
+                <td>4 pm</td>
+                <td>7.30 pm</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="hr-sect">
+    <h5 style="color:black">Vechile Available For Pune City </h5>
+</div>
+
+<div class="row ">
+    <div *ngFor=" let vechile of vechiles" class="col s16 m3">
+        <div class="card">
+            <div class="card-image">
+                <img width="100%" src="{{vechile.src}}">
+                <!-- <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a> -->
+            </div>
+            <div class="card-content">
+                <span class="card-title">{{vechile.name}}</span>
+                <p>No of seats: {{vechile.seats}}</p>
+                <p>8 Hrs & 80km: {{vechile.cost}} rs</p>
+                <p>Extra Km: {{vechile.extraKm}} rs</p>
+                <p>Extra Hr: {{vechile.extraHr}} rs</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col s12 offset-m3 m6">
+        <div class="card ">
+            <div class="card-content ">
+                <span class="orange-text text-lighten-2">Terms and Conditions</span>
+                <p>Toll, Parking and interstate taxes will be charged additionally (These charges are not included in
+                    the package)</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 offset-m3 m6">
+        <div class="card ">
+            <div class="card-content">
+                <span class="orange-text text-lighten-2 ">Outstation</span>
+                <p>
+                    We have spacial Packages Mumbai, Mahabaleshwer and Bhimashanker.
+                </p>
+                <br>
+                <p>
+                    Or you can get a vechile from pune to anywhere in Maharashtra.
+                </p>
+                <br>
+                <p>
+                    In afordable price And good service.
+                </p>
+            </div>
+            <div class="card-action">
+                <a routerLink="/outstation">Know Price</a>
+            </div>
+        </div>
+    </div>
+</div>
